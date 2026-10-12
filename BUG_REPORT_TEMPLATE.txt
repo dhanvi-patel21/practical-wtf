@@ -1,0 +1,37 @@
+SIMPLE BUGS
+Bug	Original problem	                                                                     Correction made	                                                                                                                          Why required
+S1	First navigation link had an incorrect target.	             Changed the link target to #calculator.	                                      Allows navigation to scroll to the calculator section.
+S2	Generic container was used for site                                      Replaced it with the semantic <footer> element.                                    Improves HTML5 semantics and accessibility.
+                   information at the bottom.	                                 
+S3	Background color CSS syntax was incorrect.	              Corrected it to background-color: #f0f4f8;.	                    Ensures the page background color is applied.
+S4	Heading CSS selector did not match the HTML ID.           Changed the selector to #main-heading.	                   Applies the intended heading styles.
+S5	Tuition and laboratory fees were added as strings.         Converted input values using Number().	                  Ensures fees are added numerically.
+S6	Administration charge used an incorrect                           Changed the calculation to subtotal * 0.05.	                       Applies the required 5% administration charge.
+                   percentage.	               
+CODE COMPLETION / IMPLEMENTATION
+
+M1: Added UTF-8 character encoding and responsive viewport metadata.
+
+M2: Added an <aside> containing the heading “Important Note” and a reminder to verify fee values.
+
+M3: Used Flexbox with justify-content: space-between to arrange navigation links horizontally.
+
+M4: Used CSS Grid with two equal columns to display the information cards.
+
+M5: Added a media query for screens 600px and below to stack the cards and navigation vertically.
+
+M6: Implemented calculateDiscount(amount, percentage) to return amount * percentage / 100.
+
+D1: Implemented getRate(type) using if–else statements: Merit = 20%, Sports = 10%, and None = 0%.
+
+D2: Implemented calculateTotal(subtotal, discount, adminCharge) to return subtotal - discount + adminCharge.
+
+D3: Implemented buildBreakdown(payable, count) using a for loop to display each semester's fee and cumulative payment.
+
+FUNCTIONAL TEST
+
+Test input: Tuition ₹50,000; Laboratory ₹2,000; Scholarship: Merit; Semesters: 2.
+
+Observed result (fill in after running the webpage): Subtotal: ₹52,000; Discount: ₹10,400; Administration charge: ₹2,600; Payable per semester: ₹44,200; Cumulative after 2 semesters: ₹88,400.
+
+Mobile layout checked (Yes/No): Fill in after testing the webpage at a width of 600px or less.
